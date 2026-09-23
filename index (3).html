@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TARUN ARMY #1</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#f8f8f8;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+/* MAIN */
+.main{
+    width:100%;
+    max-width:480px;
+    min-height:100vh;
+    margin:auto;
+    text-align:center;
+    padding:95px 15px 40px;
+}
+
+/* =========================
+   DP
+========================= */
+
+.dp-wrapper{
+    width:205px;
+    height:205px;
+    margin:0 auto 38px;
+
+    position:relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* DOT CIRCLE */
+.dp-wrapper::before{
+    content:"";
+
+    position:absolute;
+
+    width:198px;
+    height:198px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #948a81 0 4.8px,
+            transparent 5.8px
+        );
+
+    background-size:21px 21px;
+    background-position:center;
+
+    -webkit-mask:
+        radial-gradient(
+            circle,
+            transparent 0 87px,
+            #000 88px 99px,
+            transparent 100px
+        );
+
+    mask:
+        radial-gradient(
+            circle,
+            transparent 0 87px,
+            #000 88px 99px,
+            transparent 100px
+        );
+}
+
+/* DP IMAGE */
+.dp{
+    width:143px;
+    height:143px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    position:relative;
+    z-index:2;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.12);
+}
+
+/* =========================
+   HEADLINE
+========================= */
+
+.headline{
+    font-family:Georgia,"Times New Roman",serif;
+
+    font-size:29px;
+    line-height:1.1;
+
+    font-weight:900;
+
+    color:#000;
+
+    letter-spacing:-.7px;
+
+    padding:0 5px;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+
+.subtitle{
+    margin-top:19px;
+
+    font-size:15px;
+
+    letter-spacing:2.5px;
+
+    color:#292929;
+
+    white-space:nowrap;
+}
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.telegram-btn{
+    width:94%;
+    height:62px;
+
+    margin:32px auto 0;
+
+    border-radius:35px;
+
+    background:#0d8df5;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:20px;
+
+    text-decoration:none;
+
+    color:white;
+
+    box-shadow:
+        0 10px 24px rgba(13,141,245,.27);
+
+    transition:.2s ease;
+}
+
+.telegram-btn:active{
+    transform:scale(.98);
+}
+
+/* TELEGRAM ICON */
+.telegram-icon{
+    width:36px;
+    height:36px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.17);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.telegram-icon img{
+    width:22px;
+    height:22px;
+}
+
+/* BUTTON TEXT */
+.telegram-text{
+    font-size:20px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown{
+    width:96%;
+
+    margin:40px auto 0;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:3px;
+}
+
+.time-box{
+    text-align:center;
+}
+
+.number{
+    color:#c0003d;
+
+    font-size:36px;
+
+    line-height:1;
+
+    font-weight:800;
+}
+
+.label{
+    color:#b0003a;
+
+    font-size:11px;
+
+    margin-top:11px;
+
+    letter-spacing:.3px;
+}
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
+
+@media(max-width:360px){
+
+    .main{
+        padding-top:70px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    .dp-wrapper{
+        width:180px;
+        height:180px;
+        margin-bottom:30px;
+    }
+
+    .dp-wrapper::before{
+        width:174px;
+        height:174px;
+
+        background-size:18px 18px;
+
+        -webkit-mask:
+            radial-gradient(
+                circle,
+                transparent 0 76px,
+                #000 77px 87px,
+                transparent 88px
+            );
+
+        mask:
+            radial-gradient(
+                circle,
+                transparent 0 76px,
+                #000 77px 87px,
+                transparent 88px
+            );
+    }
+
+    .dp{
+        width:125px;
+        height:125px;
+    }
+
+    .headline{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:13px;
+        letter-spacing:2px;
+    }
+
+    .telegram-btn{
+        height:57px;
+        margin-top:28px;
+        gap:15px;
+    }
+
+    .telegram-icon{
+        width:33px;
+        height:33px;
+    }
+
+    .telegram-icon img{
+        width:20px;
+        height:20px;
+    }
+
+    .telegram-text{
+        font-size:18px;
+    }
+
+    .countdown{
+        margin-top:34px;
+    }
+
+    .number{
+        font-size:31px;
+    }
+
+    .label{
+        font-size:10px;
+    }
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="main">
+
+    <!-- =====================
+         DP
+    ====================== -->
+
+    <div class="dp-wrapper">
+
+        <img
+            class="dp"
+            src="https://d1yei2z3i6k35z.cloudfront.net/9021055/6aaec9bf6010f1.82758909_6835.jpg"
+            alt="TARUN ARMY"
+        >
+
+    </div>
+
+
+    <!-- =====================
+         HEADLINE
+    ====================== -->
+
+    <div class="headline">
+        TARUN ARMY #1
+    </div>
+
+
+    <!-- =====================
+         SUBTITLE
+    ====================== -->
+
+    <div class="subtitle">
+        VIP PANEL JOIN KARO FAST 🚀
+    </div>
+
+
+    <!-- =====================
+         TELEGRAM BUTTON
+    ====================== -->
+
+    <a
+        class="telegram-btn"
+        href="https://t.me/+s9fCgdVU5-1kOGQ1"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <span class="telegram-icon">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                alt="Telegram"
+            >
+
+        </span>
+
+
+        <span class="telegram-text">
+            JOIN TELEGRAM
+        </span>
+
+
+        <span class="telegram-icon">
+
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                alt="Telegram"
+            >
+
+        </span>
+
+    </a>
+
+
+    <!-- =====================
+         COUNTDOWN
+    ====================== -->
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <div class="number" id="days">00</div>
+            <div class="label">DAYS</div>
+        </div>
+
+        <div class="time-box">
+            <div class="number" id="hours">00</div>
+            <div class="label">HOURS</div>
+        </div>
+
+        <div class="time-box">
+            <div class="number" id="minutes">00</div>
+            <div class="label">MINUTES</div>
+        </div>
+
+        <div class="time-box">
+            <div class="number" id="seconds">54</div>
+            <div class="label">SECONDS</div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+let totalSeconds = 54;
+
+function updateTimer(){
+
+    let days =
+        Math.floor(totalSeconds / 86400);
+
+    let hours =
+        Math.floor(
+            (totalSeconds % 86400) / 3600
+        );
+
+    let minutes =
+        Math.floor(
+            (totalSeconds % 3600) / 60
+        );
+
+    let seconds =
+        totalSeconds % 60;
+
+
+    document.getElementById("days").textContent =
+        String(days).padStart(2,"0");
+
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2,"0");
+
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2,"0");
+
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2,"0");
+
+
+    if(totalSeconds > 0){
+
+        totalSeconds--;
+
+    }else{
+
+        totalSeconds = 54;
+
+    }
+}
+
+updateTimer();
+
+setInterval(updateTimer,1000);
+
+</script>
+
+</body>
+</html>
